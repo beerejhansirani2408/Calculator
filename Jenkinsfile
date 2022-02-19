@@ -9,7 +9,6 @@ pipeline{
      stage("Maven Build"){
        steps{
             sh "mvn clean install"
-            sh "cp /*.war/webapps"
              }
             }
      stage("deploy"){
