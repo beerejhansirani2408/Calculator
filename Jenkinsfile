@@ -12,7 +12,7 @@ pipeline{
             sh "mv target/*.war target/myweb.war"
              }
             }
-     stage("deploy-dev"){
+     stage("deploy"){
        steps{
           Dockerfile(['tomcat-dev1'])
             }
