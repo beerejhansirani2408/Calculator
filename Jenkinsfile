@@ -12,9 +12,7 @@ pipeline{
              }
             }
      stage('Back-end') {
-            agent {
-                docker { image 'Dockerfile' }
+       agent { dockerfile true }
             }
           }
         }
-      }
