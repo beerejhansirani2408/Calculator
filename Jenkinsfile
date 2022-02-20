@@ -13,7 +13,7 @@ pipeline{
             }
      stage("Docker Build"){
        steps{
-         deploy (['tomcat-dev1'])
+         echo (['tomcat-dev1'])
             }
           }
         }
