@@ -13,7 +13,7 @@ pipeline{
             }
      stage("Docker Build"){
        steps{
-         sshagent(['tomcat-dev1'])
+         deploy (['tomcat-dev1'])
             }
           }
         }
