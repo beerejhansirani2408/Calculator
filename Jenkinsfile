@@ -12,7 +12,9 @@ pipeline{
              }
             }
      stage('deploy-main') {
-       any { dockerfile true }
+       steps{
+            any { dockerfile true }
             }
           }
         }
+      }
