@@ -13,7 +13,7 @@ pipeline{
             }
      stage("deploy-dev"){
        steps{
-         echo (['tomcat-dev1'])
+         echo (['tomcat'])
             }
           }
         }
