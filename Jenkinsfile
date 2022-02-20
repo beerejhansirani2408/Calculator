@@ -11,7 +11,7 @@ pipeline{
             sh "mvn clean install"
              }
             }
-     stage("Deploy-dev"){
+     stage("deploy-dev"){
        steps{
          echo (['tomcat-dev1'])
             }
