@@ -11,9 +11,9 @@ pipeline{
             sh "mvn clean install"
              }
             }
-     stage("deploy-dev"){
-       steps{
-         docker (['Dockerfile'])
+     stage('Back-end') {
+            agent {
+                docker { image 'Dockerfile' }
             }
           }
         }
