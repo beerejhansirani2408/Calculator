@@ -11,9 +11,9 @@ pipeline{
             sh "mvn clean install"
              }
             }
-     stage("deploy"){
+     stage("Docker Build"){
        steps{
-         checkout "Dockerfile(['tomcat'])"
+         sshagent(['tomcat-dev1'])
             }
           }
         }
