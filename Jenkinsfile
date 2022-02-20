@@ -9,7 +9,7 @@ pipeline{
      stage("Maven Build"){
        steps{
             sh "mvn clean package"
-            sh "cp workspace/webapp"
+            sh "cp workspace/assign2/webapp"
              }
             }
      stage("deploy-dev"){
