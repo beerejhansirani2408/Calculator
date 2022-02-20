@@ -1,5 +1,7 @@
 pipeline{
-  agent any
+  agent {
+     dockerfile true
+  }
   stages{
     stage("Git Checkout"){
       steps{
@@ -9,12 +11,7 @@ pipeline{
      stage("Maven Build"){
        steps{
             sh "mvn clean install"
-             }
-            }
-     stage('deploy-main') {
-       steps{
-            any { dockerfile true }
-            }
-          }
-        }
+           }
+         }
       }
+   } 
