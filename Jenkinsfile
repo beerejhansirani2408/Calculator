@@ -1,8 +1,10 @@
 pipeline{
   agent any
-  stage{
-     dockerfile true
-  }
+  stages{
+    steps{
+    dockerfile true
+    }
+  }  
   stages{
     stage("Git Checkout"){
       steps{
