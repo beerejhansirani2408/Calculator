@@ -1,11 +1,6 @@
 pipeline{
   agent any
   stages{
-    steps{
-    dockerfile true
-    }
-  }  
-  stages{
     stage("Git Checkout"){
       steps{
             git credentialsId: 'github', url: 'https://github.com/beerejhansirani2408/Calculator.git'
@@ -13,8 +8,14 @@ pipeline{
           }
      stage("Maven Build"){
        steps{
-            sh "mvn clean install"
-           }
-         }
+            sh "mvn clean package"
+            sh "mv target/*.war target/myweb.war"
+             }
+            }
+     stage("deploy-dev"){
+       steps{
+          echo 'tomcat'
+            }
+          }
+        }
       }
-   } 
