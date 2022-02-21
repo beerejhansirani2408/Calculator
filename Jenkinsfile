@@ -11,9 +11,9 @@ pipeline{
             sh "mvn clean install"
              }
             }
-     stage("Docker Build"){
+     stage("Building image"){
        steps{
-          sh "docker build -t ubuntu-tomcat:1.0"
+          sh 'docker.build registry + ":$BUILD_NUMBER"'
             }
           }
         }
