@@ -13,7 +13,7 @@ pipeline{
             }
      stage("Docker Build"){
        steps{
-          sh "docker build -t ubuntu"
+          sh "docker build -t ubuntu | https://hub.docker.com/u/jhansirani408 |-"
             }
           }
         }
