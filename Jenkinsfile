@@ -8,13 +8,12 @@ pipeline{
           }
      stage("Maven Build"){
        steps{
-            sh "mvn clean package"
-            sh "cp workspace/assign2/webapp"
+            sh "mvn clean install"
              }
             }
-     stage("deploy-dev"){
+     stage("Docker Build"){
        steps{
-          echo 'tomcat'
+          sh "docker build -t ubuntu"
             }
           }
         }
