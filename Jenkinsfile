@@ -13,7 +13,7 @@ pipeline{
             }
      stage("Building image"){
        steps{
-          sh 'docker build registry + ":$BUILD_NUMBER"'
+          sh 'docker build -t ubuntu:tomcat:1.0.0 -'
             }
           }
         }
