@@ -13,7 +13,7 @@ pipeline{
             }
      stage("Docker Build"){
        steps{
-          sh "docker build -t ubuntu-tomcat:1.0 -- /usr/bin/bash"
+          sh "docker build -t ubuntu-tomcat:1.0  . -- /bin/bash"
             }
           }
         }
