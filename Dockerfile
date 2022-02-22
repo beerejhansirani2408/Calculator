@@ -1,4 +1,4 @@
 FROM ubuntu
-RUN apt update -y
-RUN apt install tomcat -y
-CMD cp /workspace/webapps
+RUN apt-get update -y
+RUN apt-get install tomcat -y
+RUN cp jenkins-workspace/webapps
