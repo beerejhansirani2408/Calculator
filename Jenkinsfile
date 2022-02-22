@@ -13,7 +13,7 @@ pipeline{
             }
      stage("Building image"){
        steps{
-          sh "docker build -t ubuntu-tomcat:1.0:$BUILD_NUMBER"
+          sh "docker build -t ubuntu-tomcat:1.0 https://github.com/beerejhansirani2408/Calculator.git"
             }
           }
         }
