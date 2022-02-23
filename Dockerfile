@@ -1,4 +1,4 @@
 FROM ubuntu
 RUN apt update -y 
 RUN apt install tomcat9 -y
-COPY /var/lib/jenkins/workspace Tomcat_server/webapp/target/webapp.war
+CMD cp /var/lib/jenkins/workspace/assign /usr/local/tomcat/webapps/
