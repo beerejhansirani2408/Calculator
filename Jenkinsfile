@@ -13,7 +13,7 @@ pipeline{
             }
      stage("Building image"){
        steps{
-          sh "docker build -t ubuntu-apache2:1.0 ."
+          sh "docker build -t ubuntu-tomcat:1.0 ."
           }
         }
       }
