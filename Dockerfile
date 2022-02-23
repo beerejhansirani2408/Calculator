@@ -1,4 +1,6 @@
 FROM ubuntu
 RUN apt update -y 
 RUN apt install tomcat9 -y
-CMD cp -v /var/lib/jenkins/workspace/assign /usr/share/tomcat9/webapps
+COPY target/internship_project.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
