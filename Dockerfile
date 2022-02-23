@@ -1,4 +1,4 @@
 FROM ubuntu
-RUN yum update -y 
-RUN yum install tomcat -y
+RUN apt update -y 
+RUN apt install tomcat9 -y
 CMD cp -v /var/lib/jenkins/workspace/assign3 /usr/share/apache2/webapps
